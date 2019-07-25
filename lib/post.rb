@@ -1,3 +1,5 @@
+require 'pry'
+
 class Post
   attr_accessor :title, :author, :all
  @@all = []
@@ -16,7 +18,12 @@ class Post
     @@all
   end
   
-  def self.author_name
-    self.author
+  def author_name
+   
+   if self.author == nil
+     nil
+   else
+     self.author.name
+   end 
   end
 end
